@@ -175,6 +175,7 @@ export default {
 }
 
 .fullscreen-v-img {
+  touch-action: pinch-zoom pan-x !important;
   z-index: 9999;
   height: 100%;
   width: 100%;
