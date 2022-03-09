@@ -1,18 +1,20 @@
 import vue from 'rollup-plugin-vue';
+import css from 'rollup-plugin-css-only'
 import babel from 'rollup-plugin-babel';
 import babelrc from 'babelrc-rollup';
 import istanbul from 'rollup-plugin-istanbul';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 import { minify } from 'uglify-es';
 
 const pkg = require('./package.json');
 
 const external = Object.keys(pkg.dependencies);
 const plugins = [
+  css(),
   vue({
-    css: true,
+    css: true
   }),
-  babel(babelrc()),
+  babel(babelrc())
 ];
 
 if (process.env.NODE_ENV === 'production') {
