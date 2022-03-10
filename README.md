@@ -1,5 +1,3 @@
-<p align="center"><a href="https://v-img.review" target="_blank"><img width="775"src="logo.png"></a></p>
-
 <p align="center">
   <a href="https://www.npmjs.com/package/v-img-viewer"><img src="https://img.shields.io/npm/v/v-img.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/v-img-viewer"><img src="https://img.shields.io/npm/dm/v-img.svg" alt="Downloads"></a>
@@ -12,20 +10,6 @@
 </p>
 
 v-img is a plugin for [Vue.js](https://vuejs.org/) that allows you to show images in full-screen gallery by adding only one directive to the `<img>` tag.
-
-[Demonstration page](https://v-img.review)
-
-### Browser support
-| Firefox | Chrome | Safari | Opera | Firefox (mobile)   | Chrome (mobile)    | Safari (mobile)    |
-|:--:     |:--:    |:--:    |:--:   |:--:                |:--:                |:--:                |
-| 32      | 44     | 9.1    | 32    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-<p align="right">
-  big thanks to
-  <br>
-  <a href="https://www.browserstack.com/">
-    <img height="50" src="https://digitalscientists.com/system/images/1448/original/logo-browserstack.png" alt="Demonstration">
-  </a>
-</p>
 
 
 ## Installation
@@ -43,6 +27,29 @@ import VueImg from 'v-img-viewer';
 
 Vue.use(VueImg);
 ```
+
+#### For Nuxt application:
+1. create a new package `v-img.js`
+
+```javascript
+
+import Vue from 'vue';
+import VueImg from 'v-img-viewer';
+
+Vue.use(VueImg, {
+  // configuration
+});
+```
+
+2. Register the package in `nuxt.config.ts`
+
+```javascript
+plugins: [
+  ...,
+  '~/plugins/v-img.js'
+]
+```
+3. and now you can use `v-img` directive everywhere.
 
 #### via CDN
 [![](https://data.jsdelivr.com/v1/package/npm/v-img-viewer/badge)](https://www.jsdelivr.com/package/npm/v-img-viewer)
