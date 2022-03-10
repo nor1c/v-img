@@ -1,16 +1,17 @@
 {
-  "name": "v-img-prtcd",
-  "version": "0.3.5",
+  "name": "v-img-viewer",
+  "version": "1.0.0",
   "description": "Vuejs plugin for image viewing",
-  "main": "dist/v-img.js",
-  "module": "dist/v-img.mjs",
-  "jsnext:main": "dist/v-img.mjs",
+  "main": "dist/v-img-viewer.js",
+  "module": "dist/v-img-viewer.mjs",
+  "jsnext:main": "dist/v-img-viewer.mjs",
   "author": "Crowdbotics team",
   "scripts": {
+    "prebuild": "eslint lib",
     "build": "rm -rf dist && cross-env NODE_ENV=production rollup -c",
     "watch": "cross-env NODE_ENV=development rollup -c -w"
   },
-  "repository": "https://github.com/crowdbotics/v-img",
+  "repository": "https://github.com/nor1c/v-img-viewer",
   "keywords": [
     "vue",
     "images",
@@ -25,7 +26,7 @@
     "lib",
     "dist"
   ],
-  "homepage": "https://github.com/crowdbotics/v-img",
+  "homepage": "https://github.com/nor1c/v-img-viewer",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",

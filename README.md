@@ -1,9 +1,9 @@
 <p align="center"><a href="https://v-img.review" target="_blank"><img width="775"src="logo.png"></a></p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/v-img"><img src="https://img.shields.io/npm/v/v-img.svg" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/v-img"><img src="https://img.shields.io/npm/dm/v-img.svg" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/v-img"><img src="https://img.shields.io/npm/l/v-img.svg" alt="License"></a>
+  <a href="https://www.npmjs.com/package/v-img-viewer"><img src="https://img.shields.io/npm/v/v-img.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/v-img-viewer"><img src="https://img.shields.io/npm/dm/v-img.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/v-img-viewer"><img src="https://img.shields.io/npm/l/v-img.svg" alt="License"></a>
 </p>
 
 
@@ -32,24 +32,24 @@ v-img is a plugin for [Vue.js](https://vuejs.org/) that allows you to show image
 
 #### via npm
 ```
-npm install v-img --save
+npm install v-img-viewer --save
 ```
 
 In your script entry point:
 
 ```javascript
 import Vue from 'vue';
-import VueImg from 'v-img';
+import VueImg from 'v-img-viewer';
 
 Vue.use(VueImg);
 ```
 
 #### via CDN
-[![](https://data.jsdelivr.com/v1/package/npm/v-img/badge)](https://www.jsdelivr.com/package/npm/v-img)
+[![](https://data.jsdelivr.com/v1/package/npm/v-img-viewer/badge)](https://www.jsdelivr.com/package/npm/v-img-viewer)
 * make sure to change `latest` to the number of latest version of the plugin to avoid compatibility problems.
 ```html
 <!-- After vuejs -->
-<script src="https://cdn.jsdelivr.net/npm/v-img@latest/dist/v-img.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/v-img@latest/dist/v-img-viewer.min.js"></script>
 ```
 
 ### Optional configurations
@@ -72,20 +72,20 @@ Vue.use(VueImg, vueImgConfig);
 
 Add `v-img` directive to the image.
 ```vue
-<img v-img src="...">
+<img v-img class="v-img" src="...">
 ```
 
 ### Available options
 Add similar directive arguments to place images to one gallery. (`:name` from the example below could be anything you want)
 ```vue
-<img v-img:name src="...">
-<img v-img:name src="...">
+<img v-img:name class="v-img" src="...">
+<img v-img:name class="v-img" src="...">
 ```
 
 Options that could be specified in directive value
 
 ```vue
-<img v-img="{...}" src="...">
+<img v-img="{ ... }" class="v-img" src="...">
 ```
 
 | Option | Description | Default value | Data type |
